@@ -8,11 +8,11 @@ ifndef LOADING_PLUGINS
         else
             RPM_SPEC_FILES := $(call get-mgmt-rpm-spec)
         endif
-    else ifeq ($(PACKAGE_SET),vm)
-        ifneq ($(filter $(DISTRIBUTION), debian qubuntu),)
-            DEBIAN_BUILD_DIRS := $(call get-mgmt-debian-dir)
-        else
-            RPM_SPEC_FILES := $(call get-mgmt-rpm-spec)
-        endif
+#   else ifeq ($(PACKAGE_SET),vm)
+#       ifneq ($(filter $(DISTRIBUTION), debian qubuntu),)
+#           DEBIAN_BUILD_DIRS := $(call get-mgmt-debian-dir)
+#       else
+#           RPM_SPEC_FILES := $(call get-mgmt-rpm-spec)
+#       endif
     endif
 endif
